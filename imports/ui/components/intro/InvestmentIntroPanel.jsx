@@ -83,6 +83,19 @@ const animateIn = (targetContainer) => {
         delay: function (el, i) {
             return 300 + 25 * i;
         }
+    }).add({
+        targets: '#btn-investment-intro',
+        translateY: '-13rem',
+        translateX: '5rem',
+        //rotate: 360,
+        borderRadius: '10px',
+        duration: 3000,
+        scale: {
+            value: 1.1,
+            delay: 150,
+            duration: 850,
+            easing: 'easeInOutExpo',
+        },
     });
 }
 
@@ -129,7 +142,7 @@ class InvestmentIntro extends Component {
                                     <li><i className="fa-li fa fa-check-square"></i>Strong market presence.</li>
                                 </ul>
                                 <div class="col-md-offset-9 col-md-3 col-sm-offset-3 col-sm-6">
-                                    <button id="btn" type="button" class="form-control" name="submit">Follow on Twitter</button>
+                                    <button id="btn-investment-intro" type="button" class="form-control" name="submit">Follow on Twitter</button>
                                 </div>
                             </div>
                         </div>

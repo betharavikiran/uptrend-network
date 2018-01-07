@@ -39,6 +39,7 @@ const animateIn = (targetContainer) => {
         duration: 1200
     }).add({
         targets: '.project-slide .project-img',
+        rotate: 360,
         duration: 1000,
         opacity: [0, 1],
         translateY: [-500, 0],
@@ -83,6 +84,20 @@ const animateIn = (targetContainer) => {
         delay: function (el, i) {
             return 300 + 25 * i;
         }
+    }).add({
+        targets: '#btn-project-intro',
+        translateY: '-13rem',
+        translateX: '5rem',
+        rotate: 360,
+        borderRadius: '8px',
+        duration: 3000,
+        easing: [.91,-0.54,.29,1.56],
+        scale: {
+            value: 1.1,
+            delay: 150,
+            duration: 850,
+            easing: 'easeInOutExpo',
+        },
     });
 }
 
@@ -129,7 +144,7 @@ class ProjectIntro extends Component {
                                     <li><i className="fa-li fa fa-check-square"></i>100000+ followers on twitter</li>
                                 </ul>
                                 <div class="col-md-offset-9 col-md-3 col-sm-offset-3 col-sm-6">
-                                    <button id="btn" type="button" class="form-control" name="submit">Learn More</button>
+                                    <button id="btn-project-intro" type="button" className="form-control" name="submit">Learn More</button>
                                 </div>
                             </div>
                         </div>
